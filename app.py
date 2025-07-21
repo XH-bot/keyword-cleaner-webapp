@@ -43,7 +43,7 @@ def main():
         with st.spinner("Processing..."):
             cleaned_keywords = process_file(uploaded_file)
             st.success(f"Cleaned {len(cleaned_keywords)} unique keywords.")
-            st.write(cleaned_keywords[:50])  # preview
+            st.write(cleaned_keywords)  # preview
 
             output = to_excel(cleaned_keywords)
             st.download_button(
